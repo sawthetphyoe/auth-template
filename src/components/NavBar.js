@@ -1,6 +1,5 @@
-'use client';
-
 import Link from "next/link";
+
 
 export default function NavBar() {
     return <div className={'w-full border-b border-gray-500 h-20 absolute top-0 left-0'}>
@@ -26,6 +25,7 @@ export default function NavBar() {
                 <li className={"hover:underline underline-offset-4 hover:text-amber-500"}>
                     <Link href={'signup'}>Sign Up</Link>
                 </li>
+
             </ul>
         </header>
     </div>

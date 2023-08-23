@@ -1,10 +1,7 @@
-'use client'
-
-import {useRouter} from "next/navigation";
+import Link from "next/link";
 
 export default function LoginPage() {
 
-    const router = useRouter()
     return <div className={"flex max-w-md mx-auto w-full flex-col gap-5"}>
         <h1 className={"text-center text-3xl"}>Sign Up</h1>
         <div className={"flex flex-col w-full gap-1"}>
@@ -16,8 +13,11 @@ export default function LoginPage() {
             <input type={"email"} id={"login-password"} className={"w-full rounded-sm text-base p-2 text-black"}/>
         </div>
         <button className={"bg-amber-500 text-black px-3 py-2 rounded-md hover:opacity-75"}>Sign Up</button>
-        <button className={"text-amber-500 underline hover:no-underline underline-offset-4 self-end"}
-                onClick={() => router.push('login')}>Go to Login
+        <button className={"text-amber-500 underline hover:opacity-75 underline-offset-4 self-end"}
+        >
+            <Link href={'login'}>
+                Go to Login
+            </Link>
         </button>
         <span className={"py-6 text-amber-100 font-semibold blockt text-center"}>OR</span>
         <button
